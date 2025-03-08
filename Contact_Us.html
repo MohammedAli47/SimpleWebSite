@@ -1,0 +1,431 @@
+<html>
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: white;
+            font-family: sans-serif;
+        }
+
+        div {
+            padding: 10px 200px;
+        }
+
+        #welcome {
+            background-color: #f8f6f8;
+        }
+
+        #welcome li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 45px;
+            padding-bottom: 20px;
+            font: 15px;
+        }
+
+        #welcome li:hover {
+            cursor: pointer;
+        }
+
+        #welcome li a {
+            text-decoration: none;
+            color: #010001;
+        }
+
+        #welcome ul li:first-child img {
+            width: 35px;
+            height: auto;
+            transform: translateY(10px);
+        }
+
+        #welcome ul li:last-child img {
+            width: 30px;
+            height: auto;
+            transform: translateY(10px);
+        }
+
+        #welcome ul li:first-child {
+            margin-right: 400px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        #welcome ul li:last-child {
+            margin-right: 0;
+        }
+
+        #welcome p {
+            font-weight: bold;
+            font-size: 65px;
+            height: 150px;
+        }
+
+        #welcome span {
+            font-size: 18px;
+        }
+
+        #welcome button {
+            padding: 10px 20px;
+            margin-right: 20px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #welcome button:first-child {
+            background-color: #FF6A2D;
+            border: 2px solid #FF6A2D;
+        }
+
+        #welcome button:last-child {
+            background-color: #010001;
+            border: 2px solid #010001;
+        }
+
+        #welcome button:hover {
+            background-color: #f8f6f8;
+            color: #010001;
+            cursor: pointer;
+        }
+
+        #welcome table {
+            margin: 50px 0 50px 0;
+        }
+
+        #welcome table tr td {
+            width: 50%;
+            padding: 10px 0;
+        }
+
+        #welcome img[src="images/dish.png"] {
+            width: 450px;
+            height: auto;
+            margin: 100px;
+        }
+
+        #services {
+            text-align: center;
+        }
+
+        #services h1 {
+            margin: 50px 0 10px 0;
+        }
+
+        #services table {
+            border: 2px solid #ecedea;
+            border-radius: 5px;
+            width: 31%;
+            display: inline-block;
+            margin: 50px 0;
+            padding: 50px 0 20px 0;
+            text-align: center;
+        }
+
+        #services table:nth-of-type(2) {
+            margin: 50px 25px;
+        }
+
+        #services table:hover {
+            border-top: 6px solid #FF6A2D;
+        }
+
+        #services img {
+            width: auto;
+            height: 40px;
+        }
+
+        #services table tr td {
+            padding: 5px 20px;
+        }
+
+        #services table p {
+            font-size: 20px;
+            color: #FF6A2D;
+            padding: 0;
+        }
+
+        #services table span {
+            font-size: 16px;
+        }
+
+        #services button {
+            display: block;
+            padding: 10px 25px;
+            margin: 0 auto;
+            color: white;
+            font-size: 15px;
+            background-color: #010001;
+            border: 2px solid #010001;
+        }
+
+        #services button:hover {
+            background-color: white;
+            color: #010001;
+            cursor: pointer;
+        }
+
+        #items {
+            text-align: center;
+        }
+
+        #items h1 {
+            margin: 50px 0 10px 0;
+        }
+
+        #items table {
+            margin: 50px 0;
+            padding: 20px 0;
+            height: 250px;
+        }
+
+        #items table tr td {
+            padding: 5px 0;
+            width: 60%;
+        }
+
+        #items span {
+            font-size: 16px;
+        }
+
+        #items td[rowspan="3"] {
+            text-align: right;
+        }
+
+        #items img {
+            height: auto;
+            width: 200px;
+            margin-right: 50px;
+        }
+
+        #items img[src="images/grapes.png"] {
+            width: 80px;
+            margin-right: 120px;
+        }
+
+        #items button {
+            padding: 10px 30px;
+            color: white;
+            font-size: 15px;
+            background-color: #010001;
+            border: 2px solid #010001;
+        }
+
+        #items button:hover {
+            background-color: white;
+            color: #010001;
+            cursor: pointer;
+        }
+
+        #background {
+            background-image: url(images/tasty.png);
+            background-size: cover;
+            background-position: top;
+            color: white;
+            height: 100px;
+            text-align: center;
+            font-size: 60px;
+            text-transform: uppercase;
+            padding: 200px 0;
+        }
+
+        #testimonial {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        #testimonial h1 {
+            margin: 50px 0 10px 0;
+        }
+
+        #testimonial img {
+            margin-top: 50px;
+            width: 325px;
+            height: auto;
+        }
+
+        #testimonial h2 {
+            margin: 20px 0;
+        }
+
+        #contact-us {
+            background-image: url(images/orange-dish.png);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            height: 500px;
+        }
+
+        #contact-us h1 {
+            margin: 50px 0 10px 0;
+        }
+
+        #contact-us input {
+            margin: 10px 0;
+            width: 600px;
+            border: none;
+            border-bottom: 1px solid #010001;
+        }
+
+        #contact-us input:focus {
+            outline: none;
+        }
+
+        #contact-us input[placeholder="Email"] {
+            margin-bottom: 50px;
+        }
+
+        #contact-us button {
+            padding: 10px 30px;
+            color: white;
+            font-size: 15px;
+            background-color: #FF6A2D;
+            border: 2px solid #FF6A2D;
+            text-transform: uppercase;
+            margin-top: 50px;
+        }
+
+        #contact-us button:hover {
+            background-color: white;
+            color: #010001;
+            cursor: pointer;
+        }
+
+        #follow-us table tr td {
+            vertical-align: top;
+            padding: 0 200px 30px 0;
+        }
+
+        #follow-us table tr td img {
+            width: 40px;
+            height: auto;
+        }
+
+        #follow-us table tr td table tr td {
+            padding: 0 0 10px 0;
+        }
+
+        #follow-us table tr td table tr td:last-child {
+            padding: 0 0 10px 0;
+        }
+
+        #follow-us button {
+            padding: 5px 25px;
+            color: white;
+            font-size: 15px;
+            background-color: #FF6A2D;
+            border: 2px solid #FF6A2D;
+            margin-top: 10px;
+        }
+
+        #follow-us button:hover {
+            background-color: white;
+            color: #010001;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #EEEEEC;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="welcome">
+        <ul>
+            <li><a href="home.html"><img src="images/logo.png" /> Fruits Shop</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Fruits.html">Fruits</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact_Us.html">Contact Us</a></li>
+            <li><img src="images/search.png" /></li>
+        </ul>
+    </div>
+    <div id="contact-us">
+        <h1>Contact Us</h1>
+        <form action="ThankYou.html" method="get">
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Name" name="Name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" placeholder="Phone Number" name="Phone" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="email" placeholder="Email" name="Email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Message" name="Message" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>Send</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="follow-us">
+        <table>
+            <tr>
+                <td>Fruits</td>
+                <td>Services</td>
+                <td>List</td>
+                <td>Follow Us</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam illo porro fugit
+                    officia
+                    architecto, molestiae vero.</td>
+                <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam illo porro fugit
+                    officia
+                    architecto, molestiae vero.</td>
+                <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam illo porro fugit
+                    officia
+                    architecto, molestiae vero.</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><a href="https://www.facebook.com/"><img src="images/fb.png" /></a></td>
+                            <td><a href="https://www.twitter.com/"><img src="images/twitter.png" /></a></td>
+                            <td><a href="https://www.linkedin.com/"><img src="images/linkedin.png" /></a></td>
+                            <td><a href="https://www.instagram.com/"><img src="images/instagram.png" /></a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Subscribe Now</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <form action="ThankYou.html" method="get">
+                                    <input type="email" name="Email" />
+                                    <button>Subscribe</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <p>Copyright © All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
